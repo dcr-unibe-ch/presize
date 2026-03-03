@@ -1,14 +1,15 @@
 # presize
 
 [![](https://www.r-pkg.org/badges/version/presize?color=green)](https://cran.r-project.org/package=presize)
-[![](https://img.shields.io/badge/dev%20version-0.3.9-blue.svg)](https://github.com/CTU-Bern/presize)
+[![](https://img.shields.io/badge/dev%20version-0.3.9-blue.svg)](https://github.com/dcr-unibe-ch/presize)
 [![Actions
-Status](https://github.com/CTU-Bern/presize/workflows/R-CMD-fullcheck/badge.svg)](https://github.com/CTU-Bern/presize/actions)
-[![Codecov test
-coverage](https://codecov.io/gh/CTU-Bern/presize/branch/master/graph/badge.svg)](https://codecov.io/gh/CTU-Bern/presize?branch=master)
+Status](https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-fullcheck/badge.svg)](https://github.com/dcr-unibe-ch/presize/actions)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/presize)](https://cran.r-project.org/package=presize)
+\<– [![Codecov test
+coverage](https://codecov.io/gh/CTU-Bern/presize/branch/master/graph/badge.svg)](https://codecov.io/gh/CTU-Bern/presize?branch=master)
+–\>
 
 [Bland (2009)](https://www.bmj.com/content/339/bmj.b3985) recommended to
 base study sizes on the width of the confidence interval rather the
@@ -36,7 +37,7 @@ install.packages('presize', repos = c('https://ctu-bern.r-universe.dev', 'https:
 `presize` provides functions for
 
 | Measure                    | Function         | Methods available                                                                                                        |
-|----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------|
+| -------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | **Descriptive measures**   |                  |                                                                                                                          |
 | Mean                       | `prec_mean`      |                                                                                                                          |
 | Proportion                 | `prec_prop`      | Wilson, Agresti-Coull, exact, Wald (see Brown, Cai, and DasGupta 2001)                                                   |
@@ -140,34 +141,32 @@ prec_prop(p = 0.15, n = seq(600, 800, 50))
 
 An online interactive version of the package is available
 [here](https://shiny.ctu.unibe.ch/presize). The app can also be launched
-locally via
-[`launch_presize_app()`](https://ctu-bern.github.io/presize/reference/launch_presize_app.md)
-in RStudio.
+locally via `launch_presize_app()` in RStudio.
 
 ![](reference/figures/app.png)
 
 ## Getting help
 
 The package website, including more details on the functions, can be
-found [here](https://ctu-bern.github.io/presize/).
+found [here](https://dcr-unibe-ch.github.io/presize/).
 
 If you have a question, feel free to make a thread on the
-[discussion](https://github.com/CTU-Bern/presize/discussions) page.
+[discussion](https://github.com/dcr-unibe-ch/presize/discussions) page.
 
 If you encounter a bug, please create an
-[issue](https://github.com/CTU-Bern/presize/issues).
+[issue](https://github.com/dcr-unibe-ch/presize/issues).
 
 ## Contributing
 
 Contributions to `presize` are welcome. If you have ideas, open an
-[issue](https://github.com/CTU-Bern/presize/issues) or a [discussion
-thread](https://github.com/CTU-Bern/presize/discussions) on GitHub.
+[issue](https://github.com/dcr-unibe-ch/presize/issues) or a [discussion
+thread](https://github.com/dcr-unibe-ch/presize/discussions) on GitHub.
 
 If you want to contribute code, please feel free to fork the repository,
 make your changes and make a pull request to have them integrated into
 the package. New functionality should have accompanying tests and pass
 continuous integration. See also the [contributing
-guidelines](https://github.com/CTU-Bern/presize/blob/master/CONTRIBUTING.md).
+guidelines](https://github.com/dcr-unibe-ch/presize/blob/master/CONTRIBUTING.md).
 
 ## Funding
 
@@ -254,7 +253,7 @@ Miettinen, O, and M Nurminen. 1985. “Comparative Analysis of Two Rates.”
 Newcombe, R G. 1998. “Interval Estimation for the Difference Between
 Independent Proportions: Comparison of Eleven Methods.” *Statistics in
 Medicine* 17: 873–90.
-<https://doi.org/10.1002/(sici)1097-0258(19980430)17:8%3C873::aid-sim779%3E3.0.co;2-i>.
+[https://doi.org/10.1002/(sici)1097-0258(19980430)17:8\<873::aid-sim779\>3.0.co;2-i](https://doi.org/10.1002/\(sici\)1097-0258\(19980430\)17:8%3C873::aid-sim779%3E3.0.co;2-i).
 
 Rothman, K J, and S Greenland. 2018. “Planning Study Size Based on
 Precision Rather Than Power.” *Epidemiology* 29: 599–603.

@@ -18,31 +18,31 @@ prec_rateratio(
 
 ## Arguments
 
-- n1:
+  - n1:
+    
+    number of patients in exposed group.
 
-  number of patients in exposed group.
+  - rate1:
+    
+    event rate in the exposed group.
 
-- rate1:
+  - rate2:
+    
+    event rate in the unexposed group.
 
-  event rate in the exposed group.
+  - prec.level:
+    
+    ratio of the upper limit over the lower limit of the rate ratio
+    confidence interval.
 
-- rate2:
+  - r:
+    
+    allocation ratio (relative size of unexposed and exposed cohort
+    (`n2` / `n1`)).
 
-  event rate in the unexposed group.
-
-- prec.level:
-
-  ratio of the upper limit over the lower limit of the rate ratio
-  confidence interval.
-
-- r:
-
-  allocation ratio (relative size of unexposed and exposed cohort (`n2`
-  / `n1`)).
-
-- conf.level:
-
-  confidence level.
+  - conf.level:
+    
+    confidence level.
 
 ## Details
 

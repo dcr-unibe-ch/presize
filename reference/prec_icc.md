@@ -11,25 +11,25 @@ prec_icc(rho, k, n = NULL, conf.width = NULL, conf.level = 0.95)
 
 ## Arguments
 
-- rho:
+  - rho:
+    
+    desired intraclass correlation.
 
-  desired intraclass correlation.
+  - k:
+    
+    number of observations per n (subject).
 
-- k:
+  - n:
+    
+    number of subjects.
 
-  number of observations per n (subject).
+  - conf.width:
+    
+    precision (the full width of the confidence interval).
 
-- n:
-
-  number of subjects.
-
-- conf.width:
-
-  precision (the full width of the confidence interval).
-
-- conf.level:
-
-  confidence level.
+  - conf.level:
+    
+    confidence level.
 
 ## Value
 
@@ -44,8 +44,8 @@ NULL, and that parameter is determined from the others.
 Sample size or precision is calculated according to formula 3 in Bonett
 (2002), which is an approximation. Whether ICC is calculated for a
 one-way or a two-way ANOVA does not matter in the approximation. As
-suggested by the author, \\5\*rho\\ is added to n, if \\k = 2\\ and
-\\rho \ge 7\\. This makes the assumption that there is no interaction
+suggested by the author, \\(5\*rho\\) is added to n, if \\(k = 2\\) and
+\\(rho \\ge 7\\). This makes the assumption that there is no interaction
 between rater and subject.
 
 n is rounded up to the next whole number using `ceiling`.
