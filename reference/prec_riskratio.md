@@ -20,39 +20,39 @@ prec_riskratio(
 
 ## Arguments
 
-  - p1:
-    
-    risk among exposed.
+- p1:
 
-  - p2:
-    
-    risk among unexposed.
+  risk among exposed.
 
-  - n1:
-    
-    number of patients in exposed group.
+- p2:
 
-  - r:
-    
-    allocation ratio (relative size of unexposed and exposed cohort
-    (`n2` / `n1`)).
+  risk among unexposed.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- n1:
 
-  - conf.level:
-    
-    confidence level.
+  number of patients in exposed group.
 
-  - method:
-    
-    Exactly one of `koopman` (*default*), `katz`. Methods can be
-    abbreviated.
+- r:
 
-  - ...:
-    
-    other arguments to uniroot (e.g. `tol`).
+  allocation ratio (relative size of unexposed and exposed cohort (`n2`
+  / `n1`)).
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- method:
+
+  Exactly one of `koopman` (*default*), `katz`. Methods can be
+  abbreviated.
+
+- ...:
+
+  other arguments to uniroot (e.g. `tol`).
 
 ## Details
 
@@ -68,7 +68,8 @@ confidence interval. The CI cannot be computed if one of the proportions
 is zero. If both proportions are 1, the estimate of the standard error
 becomes zero, resulting in a CI of \[1, 1\].
 
-`uniroot` is used to solve n for the katz, and koopman method.
+[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve n for
+the katz, and koopman method.
 
 ## References
 

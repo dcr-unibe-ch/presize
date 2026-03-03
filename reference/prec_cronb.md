@@ -11,25 +11,25 @@ prec_cronb(k, calpha, n = NULL, conf.level = 0.95, conf.width = NULL)
 
 ## Arguments
 
-  - k:
-    
-    number of measurements/items.
+- k:
 
-  - calpha:
-    
-    desired Cronbach's alpha.
+  number of measurements/items.
 
-  - n:
-    
-    sample size.
+- calpha:
 
-  - conf.level:
-    
-    confidence level.
+  desired Cronbach's alpha.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- n:
+
+  sample size.
+
+- conf.level:
+
+  confidence level.
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
 
 ## Value
 

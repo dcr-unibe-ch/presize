@@ -52,7 +52,8 @@
 
 
 
-<script src="presize_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+<div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>`presize`</h1>
             
@@ -63,19 +64,32 @@
 
     
     
-<p><a href="https://www.bmj.com/content/339/bmj.b3985" class="external-link">Bland (2009)</a> recommended to base study sizes on the width of the confidence interval rather the power of a statistical test. The goal of <code>presize</code> is to provide functions for such precision based sample size calculations. For a given sample size, the functions will return the precision (width of the confidence interval), and vice versa.</p>
+<p><a href="https://www.bmj.com/content/339/bmj.b3985" class="external-link">Bland (2009)</a>
+recommended to base study sizes on the width of the confidence interval
+rather the power of a statistical test. The goal of <code>presize</code>
+is to provide functions for such precision based sample size
+calculations. For a given sample size, the functions will return the
+precision (width of the confidence interval), and vice versa.</p>
 <p><code>presize</code> is loaded like any other R Package:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/CTU-Bern/presize" class="external-link">presize</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="using-presize">Using <code>presize</code><a class="anchor" aria-label="anchor" href="#using-presize"></a>
 </h2>
-<p>Here we present a couple of examples of using <code>presize</code> to determine the suitable sample size for a trial.</p>
+<p>Here we present a couple of examples of using <code>presize</code> to
+determine the suitable sample size for a trial.</p>
 <div class="section level3">
 <h3 id="precision-with-a-fixed-n">Precision with a fixed N<a class="anchor" aria-label="anchor" href="#precision-with-a-fixed-n"></a>
 </h3>
-<p>As preparation for a trial to estimate the sensitivity and specificity of a mobile colposcope, a device for detecting tissue abnormality, a sample size calculation was made to estimate the precision of the sensitivity of the device. A best guess for sensitivity was 75% at a prevalence of 15% with a desired sample size of 250 participants. As such, the question to be answered is how wide is the confidence interval going to be under such a scenario?</p>
-<p>We plug the values into the <code>prec_sens</code> (precision of sensitivity) function as follows</p>
+<p>As preparation for a trial to estimate the sensitivity and
+specificity of a mobile colposcope, a device for detecting tissue
+abnormality, a sample size calculation was made to estimate the
+precision of the sensitivity of the device. A best guess for sensitivity
+was 75% at a prevalence of 15% with a desired sample size of 250
+participants. As such, the question to be answered is how wide is the
+confidence interval going to be under such a scenario?</p>
+<p>We plug the values into the <code>prec_sens</code> (precision of
+sensitivity) function as follows</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">ss</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sensspec.html">prec_sens</a></span><span class="op">(</span>sens   <span class="op">=</span> <span class="fl">.75</span>,  <span class="co"># sensitivity </span></span>
 <span>                 prev   <span class="op">=</span> <span class="fl">.15</span>,  <span class="co"># prevalence</span></span>
@@ -90,9 +104,18 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: sensadj is the adjusted sensitivity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of positives, ntot the full sample</span></span></code></pre></div>
-<p>We see that with 250 participants, the confidence interval would be from 59% (<code>lwr</code>) to 86% (<code>upr</code>).</p>
-<p>Note that Wilson’s method of calculating confidence intervals adjusts the point estimate to allow the calculation of a symmetrical CI. This is the <code>sensadj</code> variable. For some measures there are multiple methods available. In the case of <code>prec_sens</code> (as well as <code>prec_spec</code> and <code>prec_prop</code>), there are four different approaches for creating confidence intervals, each yielding slightly different results.</p>
-<p>For specificity, we use the <code>prec_spec</code> function instead. For demonstration purposes, we can also change the method used to calculate the CI.</p>
+<p>We see that with 250 participants, the confidence interval would be
+from 59% (<code>lwr</code>) to 86% (<code>upr</code>).</p>
+<p>Note that Wilson’s method of calculating confidence intervals adjusts
+the point estimate to allow the calculation of a symmetrical CI. This is
+the <code>sensadj</code> variable. For some measures there are multiple
+methods available. In the case of <code>prec_sens</code> (as well as
+<code>prec_spec</code> and <code>prec_prop</code>), there are four
+different approaches for creating confidence intervals, each yielding
+slightly different results.</p>
+<p>For specificity, we use the <code>prec_spec</code> function instead.
+For demonstration purposes, we can also change the method used to
+calculate the CI.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/sensspec.html">prec_spec</a></span><span class="op">(</span>spec   <span class="op">=</span> <span class="fl">.75</span>,  <span class="co"># specificity </span></span>
 <span>          prev   <span class="op">=</span> <span class="fl">.15</span>,  <span class="co"># prevalence</span></span>
@@ -107,7 +130,9 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: specadj is the adjusted specificity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of negatives, ntot the full sample.</span></span></code></pre></div>
-<p>Using the other functions in <code>presize</code> is the same. For instance the precision of a mean of 60 with an SD of 10 and 40 observations is calculated as follows.</p>
+<p>Using the other functions in <code>presize</code> is the same. For
+instance the precision of a mean of 60 with an SD of 10 and 40
+observations is calculated as follows.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/prec_mean.html">prec_mean</a></span><span class="op">(</span><span class="fl">60</span>, sd <span class="op">=</span> <span class="fl">10</span>, n <span class="op">=</span> <span class="fl">40</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -119,7 +144,12 @@
 <div class="section level3">
 <h3 id="n-for-a-fixed-precision">N for a fixed precision<a class="anchor" aria-label="anchor" href="#n-for-a-fixed-precision"></a>
 </h3>
-<p>While fixing the sample size is sometimes necessary, it is more common to select a sample size based on a given precision. We might want to achieve a sensitivity of a given amount (e.g. plus-minus 5%). This is also possible with <code>presize</code>. Using the same code as above, we replace the <code>ntot</code> argument with the <code>conf.width</code> argument.</p>
+<p>While fixing the sample size is sometimes necessary, it is more
+common to select a sample size based on a given precision. We might want
+to achieve a sensitivity of a given amount (e.g. plus-minus 5%). This is
+also possible with <code>presize</code>. Using the same code as above,
+we replace the <code>ntot</code> argument with the
+<code>conf.width</code> argument.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">ss</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sensspec.html">prec_sens</a></span><span class="op">(</span>sens       <span class="op">=</span> <span class="fl">.75</span>,   <span class="co"># sensitivity </span></span>
 <span>                 prev       <span class="op">=</span> <span class="fl">.15</span>,   <span class="co"># prevalence</span></span>
@@ -135,8 +165,21 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: sensadj is the adjusted sensitivity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of positives, ntot the full sample</span></span></code></pre></div>
-<p>Under this scenario, 1904 participants (of which approximately 286 would have the condition) will yield a CI width of 0.1 (10%), on average.</p>
-<p>Most of the functions in <code>presize</code> have similar options, although the sample size argument is generally <code>n</code> instead of <code>ntot</code> (<code>prec_sens</code> and <code>prec_spec</code> are special in that you can pass either a number of individuals with a condition to be detected with <code>n</code>, or you pass <code>ntot</code> and <code>prev</code> to get the CI width for a mixed group in which case <code>n</code> is derived from <code>ntot</code> and <code>prev</code>). The calculations for sensitivity can also be preformed if the number of cases rather than the total number and prevalence are available. For instance, if we have 50 individuals with the condition and we expect a sensitivity of 60%, we can put those values in instead.</p>
+<p>Under this scenario, 1904 participants (of which approximately 286
+would have the condition) will yield a CI width of 0.1 (10%), on
+average.</p>
+<p>Most of the functions in <code>presize</code> have similar options,
+although the sample size argument is generally <code>n</code> instead of
+<code>ntot</code> (<code>prec_sens</code> and <code>prec_spec</code> are
+special in that you can pass either a number of individuals with a
+condition to be detected with <code>n</code>, or you pass
+<code>ntot</code> and <code>prev</code> to get the CI width for a mixed
+group in which case <code>n</code> is derived from <code>ntot</code> and
+<code>prev</code>). The calculations for sensitivity can also be
+preformed if the number of cases rather than the total number and
+prevalence are available. For instance, if we have 50 individuals with
+the condition and we expect a sensitivity of 60%, we can put those
+values in instead.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/sensspec.html">prec_sens</a></span><span class="op">(</span><span class="fl">.6</span>, n <span class="op">=</span> <span class="fl">50</span>, method <span class="op">=</span> <span class="st">"wilson"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -147,7 +190,8 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: sensadj is the adjusted sensitivity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of positives, ntot the full sample</span></span></code></pre></div>
-<p>Sensitivities and specificities are just proportions so <code>prec_prop</code> can also be used for this latter example.</p>
+<p>Sensitivities and specificities are just proportions so
+<code>prec_prop</code> can also be used for this latter example.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/prec_prop.html">prec_prop</a></span><span class="op">(</span><span class="fl">.6</span>, n <span class="op">=</span> <span class="fl">50</span>, method <span class="op">=</span> <span class="st">"wilson"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -157,7 +201,9 @@
 <span><span class="co">#&gt; 1 0.6 0.5928652 50  0.2621017       0.95 0.4618144 0.7239161</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: padj is the adjusted proportion, from which the ci is calculated.</span></span></code></pre></div>
-<p>Using the other functions in <code>presize</code> is the same. For instance, the sample size to obtain a CI width of 5 units with a mean of 60 with an SD of 10 is calculated as follows.</p>
+<p>Using the other functions in <code>presize</code> is the same. For
+instance, the sample size to obtain a CI width of 5 units with a mean of
+60 with an SD of 10 is calculated as follows.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/prec_mean.html">prec_mean</a></span><span class="op">(</span><span class="fl">60</span>, sd <span class="op">=</span> <span class="fl">10</span>, conf.width <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -169,8 +215,17 @@
 <div class="section level3">
 <h3 id="multiple-scenarios">Multiple scenarios<a class="anchor" aria-label="anchor" href="#multiple-scenarios"></a>
 </h3>
-<p>It is common for only a vague idea of what to expect in terms of SDs, sensitivities, etc, so it is often worthwhile creating a set of scenarios.</p>
-<p>Returning to the colposcope example from above… We want to see how the CI width varies with different sensitivities. With <code>presize</code>, it’s easy to run different scenarios, simply by passing multiple values to each parameter (where multiple values are passed, they should have the same length!). For varying a single parameter, scenarios can be created with <code>seq</code> and passed that to the appropriate <code>presize</code> functions argument. Here we vary sensitivity between 50% and 95% in steps of 5%.</p>
+<p>It is common for only a vague idea of what to expect in terms of SDs,
+sensitivities, etc, so it is often worthwhile creating a set of
+scenarios.</p>
+<p>Returning to the colposcope example from above… We want to see how
+the CI width varies with different sensitivities. With
+<code>presize</code>, it’s easy to run different scenarios, simply by
+passing multiple values to each parameter (where multiple values are
+passed, they should have the same length!). For varying a single
+parameter, scenarios can be created with <code>seq</code> and passed
+that to the appropriate <code>presize</code> functions argument. Here we
+vary sensitivity between 50% and 95% in steps of 5%.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">scenario_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sensspec.html">prec_sens</a></span><span class="op">(</span>sens <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">.5</span>, <span class="fl">.95</span>, <span class="fl">.05</span><span class="op">)</span>, </span>
 <span>                            prev <span class="op">=</span> <span class="fl">.15</span>, </span>
@@ -194,7 +249,9 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; NOTE: sensadj is the adjusted sensitivity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of positives, ntot the full sample</span></span></code></pre></div>
-<p>We can also use <code>expand.grid</code> to pass scenarios varying multiple parameters simultaneously. Below we vary sensitivity, prevalence and sample size.</p>
+<p>We can also use <code>expand.grid</code> to pass scenarios varying
+multiple parameters simultaneously. Below we vary sensitivity,
+prevalence and sample size.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scenarios</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>sens <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">.5</span>, <span class="fl">.95</span>, <span class="fl">.1</span><span class="op">)</span>,</span>
 <span>                         prev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.2</span>, <span class="fl">.04</span><span class="op">)</span>,</span>
@@ -223,8 +280,20 @@
 <span><span class="co">#&gt;  [Output truncated at 10 of 30 rows]</span></span>
 <span><span class="co">#&gt; NOTE: sensadj is the adjusted sensitivity, from which the ci is calculated.</span></span>
 <span><span class="co">#&gt;       n is the number of positives, ntot the full sample</span></span></code></pre></div>
-<p>From the print method, we see the details of the individual scenarios. The default print method for <code>presize</code> objects only prints the first 10 rows, but there are in fact 30 rows (there is also a <code>print</code> function, with an <code>n</code> option to define how many rows to print, e.g. <code>print(scenario_data, n = 5)</code> can be used to print the first five rows).</p>
-<p>Using the <code>as.data.frame</code> method, we can convert the list returned by <code>prec_sens</code> to a dataframe from which we can create tables or figures. Where multiple scenarios are calculated, plotting them can be particularly informative. <code>ggplot2</code>, for example, is particularly useful for this. Below we show CI width as a function of sensitivity, but the other parameters could be chosen instead.</p>
+<p>From the print method, we see the details of the individual
+scenarios. The default print method for <code>presize</code> objects
+only prints the first 10 rows, but there are in fact 30 rows (there is
+also a <code>print</code> function, with an <code>n</code> option to
+define how many rows to print,
+e.g. <code>print(scenario_data, n = 5)</code> can be used to print the
+first five rows).</p>
+<p>Using the <code>as.data.frame</code> method, we can convert the list
+returned by <code>prec_sens</code> to a dataframe from which we can
+create tables or figures. Where multiple scenarios are calculated,
+plotting them can be particularly informative. <code>ggplot2</code>, for
+example, is particularly useful for this. Below we show CI width as a
+function of sensitivity, but the other parameters could be chosen
+instead.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scenario_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">scenario_data</span><span class="op">)</span></span>
 <span></span>
@@ -240,7 +309,10 @@
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Sensitivity"</span>, y <span class="op">=</span> <span class="st">"CI width"</span>, col <span class="op">=</span> <span class="st">"Prevalence"</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html" class="external-link">vars</a></span><span class="op">(</span><span class="va">ntot</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="presize_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" alt="" width="672"></p>
-<p>We could also create a table of the scenarios containing the CIs. Below we select only the scenarios with sensitivities above 70% and reshape and format the table and use the <code>gt</code> package to print a nice table in HTML.</p>
+<p>We could also create a table of the scenarios containing the CIs.
+Below we select only the scenarios with sensitivities above 70% and
+reshape and format the table and use the <code>gt</code> package to
+print a nice table in HTML.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>

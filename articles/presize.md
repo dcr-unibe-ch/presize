@@ -178,7 +178,7 @@ Returning to the colposcope example from above… We want to see how the
 CI width varies with different sensitivities. With `presize`, it’s easy
 to run different scenarios, simply by passing multiple values to each
 parameter (where multiple values are passed, they should have the same
-length\!). For varying a single parameter, scenarios can be created with
+length!). For varying a single parameter, scenarios can be created with
 `seq` and passed that to the appropriate `presize` functions argument.
 Here we vary sensitivity between 50% and 95% in steps of 5%.
 
@@ -329,50 +329,4 @@ scenario_df %>%
   )
 ```
 
-Prevalence (%)
-
-Sensitivity (%)
-
-80
-
-90
-
-N = 250
-
-10
-
-60.9 - 91.1
-
-72.5 - 96.8
-
-14
-
-64.1 - 90.0
-
-75.8 - 96.3
-
-18
-
-66.2 - 89.1
-
-77.9 - 95.8
-
-N = 350
-
-10
-
-64.1 - 90.0
-
-75.8 - 96.3
-
-14
-
-67.0 - 88.8
-
-78.6 - 95.7
-
-18
-
-68.5 - 88.0
-
-80.2 - 95.3
+[TABLE]

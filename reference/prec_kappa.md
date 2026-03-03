@@ -19,34 +19,34 @@ prec_kappa(
 
 ## Arguments
 
-  - kappa:
-    
-    expected value of Cohen's kappa.
+- kappa:
 
-  - n:
-    
-    sample size.
+  expected value of Cohen's kappa.
 
-  - raters:
-    
-    number of raters (maximum of 6).
+- n:
 
-  - n\_category:
-    
-    number of categories of outcomes (maximum of 5).
+  sample size.
 
-  - props:
-    
-    expected proportions of each outcome (should have length
-    `n_category`).
+- raters:
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+  number of raters (maximum of 6).
 
-  - conf.level:
-    
-    confidence level.
+- n_category:
+
+  number of categories of outcomes (maximum of 5).
+
+- props:
+
+  expected proportions of each outcome (should have length
+  `n_category`).
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
 
 ## Value
 
@@ -63,7 +63,10 @@ that confidence intervals are symmetrical.
 
 ## See also
 
-`FixedNBinary`, `FixedN3Cats`, `CIBinary`, `CI3Cats`
+[`FixedNBinary`](https://rdrr.io/pkg/kappaSize/man/FixedNBinary.html),
+[`FixedN3Cats`](https://rdrr.io/pkg/kappaSize/man/FixedN3Cats.html),
+[`CIBinary`](https://rdrr.io/pkg/kappaSize/man/CIBinary.html),
+[`CI3Cats`](https://rdrr.io/pkg/kappaSize/man/CI3Cats.html)
 
 ## Examples
 
