@@ -11,11 +11,11 @@ the confidence interval), and vice versa.
 
 Useful links:
 
-  - <https://github.com/CTU-Bern/presize>
+- <https://github.com/CTU-Bern/presize>
 
-  - <https://ctu-bern.github.io/presize/>
+- <https://ctu-bern.github.io/presize/>
 
-  - Report bugs at <https://github.com/CTU-Bern/presize/issues>
+- Report bugs at <https://github.com/CTU-Bern/presize/issues>
 
 ## Author
 
@@ -23,12 +23,12 @@ Useful links:
 
 Authors:
 
-  - Armando Lenz
+- Armando Lenz
 
-  - Andreas Limacher <andreas.limacher@paraplegie.ch>
+- Andreas Limacher <andreas.limacher@paraplegie.ch>
 
 Other contributors:
 
-  - Odile Stalder <odile.stalder@unibe.ch> \[contributor\]
+- Odile Stalder <odile.stalder@unibe.ch> \[contributor\]
 
-  - Marie Roumet <marie.roumet@unibe.ch> \[contributor\]
+- Marie Roumet <marie.roumet@unibe.ch> \[contributor\]

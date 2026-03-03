@@ -22,41 +22,41 @@ prec_meandiff(
 
 ## Arguments
 
-  - delta:
-    
-    difference in means between the two groups.
+- delta:
 
-  - sd1:
-    
-    standard deviation in group 1.
+  difference in means between the two groups.
 
-  - sd2:
-    
-    standard deviation in group 2.
+- sd1:
 
-  - n1:
-    
-    number of patients in group 1.
+  standard deviation in group 1.
 
-  - r:
-    
-    allocation ratio (relative size of group 2 and group 1 (n2 / n1)).
+- sd2:
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+  standard deviation in group 2.
 
-  - conf.level:
-    
-    confidence level.
+- n1:
 
-  - variance:
-    
-    `equal` (*default*) or `unequal` variance.
+  number of patients in group 1.
 
-  - ...:
-    
-    other options to uniroot (e.g. `tol`)
+- r:
+
+  allocation ratio (relative size of group 2 and group 1 (n2 / n1)).
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- variance:
+
+  `equal` (*default*) or `unequal` variance.
+
+- ...:
+
+  other options to uniroot (e.g. `tol`)
 
 ## Value
 

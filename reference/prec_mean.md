@@ -19,33 +19,33 @@ prec_mean(
 
 ## Arguments
 
-  - mean:
-    
-    mean.
+- mean:
 
-  - sd:
-    
-    standard deviation.
+  mean.
 
-  - n:
-    
-    number of observations.
+- sd:
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+  standard deviation.
 
-  - conf.level:
-    
-    confidence level.
+- n:
 
-  - ...:
-    
-    other arguments to uniroot (e.g. `tol`).
+  number of observations.
 
-  - mu:
-    
-    deprecated argument
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- ...:
+
+  other arguments to uniroot (e.g. `tol`).
+
+- mu:
+
+  deprecated argument
 
 ## Value
 
@@ -61,13 +61,13 @@ Exactly one of the parameters `n` or `conf.width` must be passed as
 NULL, and that parameter is determined from the other.
 
 The precision is defined as the full width of the confidence interval.
-The confidence interval calculated as \\(t(n - 1) \* sd / sqrt(n)\\),
-with t(n-1) from the t-distribution with n-1 degrees of freedom.
+The confidence interval calculated as \\t(n - 1) \* sd / sqrt(n)\\, with
+t(n-1) from the t-distribution with n-1 degrees of freedom.
 
 This function is also suitable for a difference in paired means, as this
 reduces to a single value per individual - the difference.
 
-`uniroot` is used to solve `n`.
+[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve `n`.
 
 ## Examples
 

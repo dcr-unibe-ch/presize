@@ -20,39 +20,39 @@ prec_or(
 
 ## Arguments
 
-  - p1:
-    
-    risk among exposed.
+- p1:
 
-  - p2:
-    
-    risk among unexposed.
+  risk among exposed.
 
-  - n1:
-    
-    number of patients in exposed group.
+- p2:
 
-  - r:
-    
-    allocation ratio (relative size of unexposed and exposed cohort
-    (`n2` / `n1`)).
+  risk among unexposed.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- n1:
 
-  - conf.level:
-    
-    confidence level.
+  number of patients in exposed group.
 
-  - method:
-    
-    Exactly one of `indip_smooth` (*default*), `gart`, or `woolf`.
-    Methods can be abbreviated.
+- r:
 
-  - ...:
-    
-    other arguments to uniroot (e.g. `tol`).
+  allocation ratio (relative size of unexposed and exposed cohort (`n2`
+  / `n1`)).
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- method:
+
+  Exactly one of `indip_smooth` (*default*), `gart`, or `woolf`. Methods
+  can be abbreviated.
+
+- ...:
+
+  other arguments to uniroot (e.g. `tol`).
 
 ## Value
 
@@ -68,15 +68,15 @@ Woolf (`woolf`), Gart (`gart`), and Independence-smoothed logit
 (`indip_smooth`) belong to a general family of adjusted confidence
 intervals, adding 0 (woolf) to each cell, 0.5 (gart) to each cell, or an
 adjustment for each cell based on observed data (independence-smoothed).
-In gart and indip\_smooth, estimate of the CI is not possible if \\(p1 =
-0\\), in which case the OR becomes 0, but the lower level of the CI is
-\> 0. Further, if \\(p1 = 1\\) and \\(p2 \< 1\\), or if \\(p1 \> 0\\)
-and \\(p2 = 0\\), the OR becomes \\(\\infty\\), but the upper limit of
-the CI is finite. For the approximate intervals, `gart` and
-`indip_smooth` are the recommended intervals (Fagerland et al. 2011).
+In gart and indip_smooth, estimate of the CI is not possible if \\p1 =
+0\\, in which case the OR becomes 0, but the lower level of the CI is \>
+0. Further, if \\p1 = 1\\ and \\p2 \< 1\\, or if \\p1 \> 0\\ and \\p2 =
+0\\, the OR becomes \\\infty\\, but the upper limit of the CI is finite.
+For the approximate intervals, `gart` and `indip_smooth` are the
+recommended intervals (Fagerland et al. 2011).
 
-`uniroot` is used to solve n for the woolf, gart, and indip\_smooth
-method.
+[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve n for
+the woolf, gart, and indip_smooth method.
 
 ## References
 

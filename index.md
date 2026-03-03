@@ -36,7 +36,7 @@ install.packages('presize', repos = c('https://ctu-bern.r-universe.dev', 'https:
 `presize` provides functions for
 
 | Measure                    | Function         | Methods available                                                                                                        |
-| -------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+|----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------|
 | **Descriptive measures**   |                  |                                                                                                                          |
 | Mean                       | `prec_mean`      |                                                                                                                          |
 | Proportion                 | `prec_prop`      | Wilson, Agresti-Coull, exact, Wald (see Brown, Cai, and DasGupta 2001)                                                   |
@@ -140,7 +140,9 @@ prec_prop(p = 0.15, n = seq(600, 800, 50))
 
 An online interactive version of the package is available
 [here](https://shiny.ctu.unibe.ch/presize). The app can also be launched
-locally via `launch_presize_app()` in RStudio.
+locally via
+[`launch_presize_app()`](https://ctu-bern.github.io/presize/reference/launch_presize_app.md)
+in RStudio.
 
 ![](reference/figures/app.png)
 
@@ -252,7 +254,7 @@ Miettinen, O, and M Nurminen. 1985. “Comparative Analysis of Two Rates.”
 Newcombe, R G. 1998. “Interval Estimation for the Difference Between
 Independent Proportions: Comparison of Eleven Methods.” *Statistics in
 Medicine* 17: 873–90.
-[https://doi.org/10.1002/(sici)1097-0258(19980430)17:8\<873::aid-sim779\>3.0.co;2-i](https://doi.org/10.1002/\(sici\)1097-0258\(19980430\)17:8%3C873::aid-sim779%3E3.0.co;2-i).
+<https://doi.org/10.1002/(sici)1097-0258(19980430)17:8%3C873::aid-sim779%3E3.0.co;2-i>.
 
 Rothman, K J, and S Greenland. 2018. “Planning Study Size Based on
 Precision Rather Than Power.” *Epidemiology* 29: 599–603.
