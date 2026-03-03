@@ -3,7 +3,7 @@
 [![](https://www.r-pkg.org/badges/version/presize?color=green)](https://cran.r-project.org/package=presize)
 [![](https://img.shields.io/badge/dev%20version-0.3.9-blue.svg)](https://github.com/dcr-unibe-ch/presize)
 [![Actions
-Status](https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-fullcheck/badge.svg)](https://github.com/dcr-unibe-ch/presize/actions)
+Status](https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-release/badge.svg)](https://github.com/dcr-unibe-ch/presize/actions)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/presize)](https://cran.r-project.org/package=presize)
