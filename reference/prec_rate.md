@@ -18,31 +18,31 @@ prec_rate(
 
 ## Arguments
 
-- r:
+  - r:
+    
+    rate or rate ratio.
 
-  rate or rate ratio.
+  - x:
+    
+    number of events.
 
-- x:
+  - conf.width:
+    
+    precision (the full width of the confidence interval). Should not
+    exceed 5 times `r`.
 
-  number of events.
+  - conf.level:
+    
+    confidence level.
 
-- conf.width:
+  - method:
+    
+    The method to use to calculate precision. Exactly one method may be
+    provided. Methods can be abbreviated.
 
-  precision (the full width of the confidence interval). Should not
-  exceed 5 times `r`.
-
-- conf.level:
-
-  confidence level.
-
-- method:
-
-  The method to use to calculate precision. Exactly one method may be
-  provided. Methods can be abbreviated.
-
-- ...:
-
-  other arguments to uniroot (e.g. `tol`).
+  - ...:
+    
+    other arguments to uniroot (e.g. `tol`).
 
 ## Value
 
@@ -61,19 +61,18 @@ implemented to calculate the rate and the precision. For few events `x`
 If more than one method is specified or the method is miss-specified,
 the 'score' method will be used.
 
-[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve n for
-the score and exact method.
+`uniroot` is used to solve n for the score and exact method.
 
 ## References
 
 Barker, L. (2002) *A Comparison of Nine Confidence Intervals for a
-Poisson Parameter When the Expected Number of Events is \\\le\\ 5*, The
-American Statistician, 56:2, 85-89,
+Poisson Parameter When the Expected Number of Events is \\(\\le\\) 5*,
+The American Statistician, 56:2, 85-89,
 [doi:10.1198/000313002317572736](https://doi.org/10.1198/000313002317572736)
 
 ## See also
 
-[`poisson.test`](https://rdrr.io/r/stats/poisson.test.html)
+`poisson.test`
 
 ## Examples
 

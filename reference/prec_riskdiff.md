@@ -20,39 +20,39 @@ prec_riskdiff(
 
 ## Arguments
 
-- p1:
+  - p1:
+    
+    risk among exposed.
 
-  risk among exposed.
+  - p2:
+    
+    risk among unexposed.
 
-- p2:
+  - n1:
+    
+    number of patients in exposed group.
 
-  risk among unexposed.
+  - conf.width:
+    
+    precision (the full width of the confidence interval).
 
-- n1:
+  - r:
+    
+    allocation ratio (relative size of exposed and unexposed cohort
+    (`n1` / `n2`)).
 
-  number of patients in exposed group.
+  - conf.level:
+    
+    confidence level.
 
-- conf.width:
+  - method:
+    
+    Exactly one of `newcombe` (*default*), `mn` (Miettinen-Nurminen),
+    `ac` (Agresti-Caffo), `wald`. Methods can be abbreviated.
 
-  precision (the full width of the confidence interval).
-
-- r:
-
-  allocation ratio (relative size of exposed and unexposed cohort (`n1`
-  / `n2`)).
-
-- conf.level:
-
-  confidence level.
-
-- method:
-
-  Exactly one of `newcombe` (*default*), `mn` (Miettinen-Nurminen), `ac`
-  (Agresti-Caffo), `wald`. Methods can be abbreviated.
-
-- ...:
-
-  other options to uniroot (e.g. `tol`)
+  - ...:
+    
+    other options to uniroot (e.g. `tol`)
 
 ## Details
 
@@ -61,7 +61,7 @@ NULL, and that parameter is determined from the other.
 
 Newcombe (`newcombe`) proposed a confidence interval based on the wilson
 score method for the single proportion (see
-[prec_prop](https://ctu-bern.github.io/presize/reference/prec_prop.md)).
+[prec\_prop](https://ctu-bern.github.io/presize/reference/prec_prop.md)).
 The confidence interval without continuity correction is implemented
 from equation 10 in Newcombe (1998).
 
@@ -74,8 +74,7 @@ Agresti-Caffo (`ac`) confidence interval is based on the Wald confidence
 interval, adding 1 success to each cell of the 2 x 2 table (see Agresti
 and Caffo 2000).
 
-[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve n for
-the newcombe, ac, and mn method.
+`uniroot` is used to solve n for the newcombe, ac, and mn method.
 
 ## References
 

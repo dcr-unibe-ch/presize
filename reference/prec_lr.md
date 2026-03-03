@@ -40,41 +40,41 @@ prec_neg_lr(
 
 ## Arguments
 
-- prev:
+  - prev:
+    
+    disease/case prevalence in the study group.
 
-  disease/case prevalence in the study group.
+  - p1:
+    
+    proportion of positives in group 1 (e.g. sensitivity).
 
-- p1:
+  - p2:
+    
+    proportion of positives in group 2 (e.g. 1 - specificity).
 
-  proportion of positives in group 1 (e.g. sensitivity).
+  - n:
+    
+    total group size.
 
-- p2:
+  - conf.width:
+    
+    precision (the full width of the confidence interval).
 
-  proportion of positives in group 2 (e.g. 1 - specificity).
+  - conf.level:
+    
+    confidence level (defaults to 0.95).
 
-- n:
+  - ...:
+    
+    other arguments to uniroot (e.g. `tol`).
 
-  total group size.
+  - sens:
+    
+    sensitivity.
 
-- conf.width:
-
-  precision (the full width of the confidence interval).
-
-- conf.level:
-
-  confidence level (defaults to 0.95).
-
-- ...:
-
-  other arguments to uniroot (e.g. `tol`).
-
-- sens:
-
-  sensitivity.
-
-- spec:
-
-  specificity.
+  - spec:
+    
+    specificity.
 
 ## Value
 
@@ -105,9 +105,9 @@ non-diseased group.
 
 ## Functions
 
-- `prec_pos_lr()`: "Positive likelihood ratio"
+  - `prec_pos_lr()`: "Positive likelihood ratio"
 
-- `prec_neg_lr()`: "Negative likelihood ratio"
+  - `prec_neg_lr()`: "Negative likelihood ratio"
 
 ## References
 

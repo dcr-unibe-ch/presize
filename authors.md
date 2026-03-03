@@ -2,15 +2,15 @@
 
 ## Authors
 
-- **Armando Lenz**. Author.
+  - **Armando Lenz**. Author.
 
-- **Alan G. Haynes**. Maintainer, author.
+  - **Alan G. Haynes**. Maintainer, author.
 
-- **Andreas Limacher**. Author.
+  - **Andreas Limacher**. Author.
 
-- **Odile Stalder**. Contributor.
+  - **Odile Stalder**. Contributor.
 
-- **Marie Roumet**. Contributor.
+  - **Marie Roumet**. Contributor.
 
 ## Citation
 

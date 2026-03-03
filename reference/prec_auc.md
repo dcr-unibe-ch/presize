@@ -12,29 +12,29 @@ prec_auc(auc, prev, n = NULL, conf.width = NULL, conf.level = 0.95, ...)
 
 ## Arguments
 
-- auc:
+  - auc:
+    
+    AUC value.
 
-  AUC value.
+  - prev:
+    
+    prevalence.
 
-- prev:
+  - n:
+    
+    number of observations.
 
-  prevalence.
+  - conf.width:
+    
+    precision (the full width of the confidence interval).
 
-- n:
+  - conf.level:
+    
+    confidence level.
 
-  number of observations.
-
-- conf.width:
-
-  precision (the full width of the confidence interval).
-
-- conf.level:
-
-  confidence level.
-
-- ...:
-
-  other arguments to `optimize`.
+  - ...:
+    
+    other arguments to `optimize`.
 
 ## Value
 

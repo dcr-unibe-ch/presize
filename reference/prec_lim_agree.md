@@ -13,17 +13,17 @@ prec_lim_agree(n = NULL, conf.width = NULL, conf.level = 0.95)
 
 ## Arguments
 
-- n:
+  - n:
+    
+    sample size.
 
-  sample size.
+  - conf.width:
+    
+    precision (the full width of the confidence interval).
 
-- conf.width:
-
-  precision (the full width of the confidence interval).
-
-- conf.level:
-
-  confidence level.
+  - conf.level:
+    
+    confidence level.
 
 ## Value
 

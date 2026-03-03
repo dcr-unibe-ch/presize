@@ -2,4 +2,4 @@
 
 ### All vignettes
 
-- [\`presize\`](https://ctu-bern.github.io/presize/articles/presize.md):
+  - [\`presize\`](https://ctu-bern.github.io/presize/articles/presize.md):
