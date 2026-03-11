@@ -1,4 +1,4 @@
-## presize 0.3.10
+## presize 0.3.11
 
 -   Update URLs
 

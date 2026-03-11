@@ -13,9 +13,9 @@ Bland (2009) \doi{10.1136/bmj.b3985} recommended to base study sizes on the widt
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/CTU-Bern/presize}
-  \item \url{https://ctu-bern.github.io/presize/}
-  \item Report bugs at \url{https://github.com/CTU-Bern/presize/issues}
+  \item \url{https://github.com/dcr-unibe-ch/presize}
+  \item \url{https://dcr-unibe-ch.github.io/presize/}
+  \item Report bugs at \url{https://github.com/dcr-unibe-ch/presize/issues}
 }
 
 }
