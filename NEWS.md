@@ -1,3 +1,7 @@
+## presize 0.3.12
+
+-   Update SCTO logo
+
 ## presize 0.3.11
 
 -   Update URLs
