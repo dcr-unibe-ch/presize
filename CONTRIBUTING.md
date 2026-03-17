@@ -4,10 +4,9 @@ This guide gives some points to contributing to `presize`. Contributions
 do not have to entail literally modifying/adding code, bug reports are
 equally important.
 
-  - Bug reports should be made via issues
+- Bug reports should be made via issues
 
-  - Modifications or additions to code can be made via pull requests
-    (PR)
+- Modifications or additions to code can be made via pull requests (PR)
 
 ## Issues
 

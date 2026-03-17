@@ -1,7 +1,7 @@
 # presize
 
 [![](https://www.r-pkg.org/badges/version/presize?color=green)](https://cran.r-project.org/package=presize)
-[![](https://img.shields.io/badge/dev%20version-0.3.9-blue.svg)](https://github.com/dcr-unibe-ch/presize)
+[![](https://img.shields.io/badge/dev%20version-0.3.12-blue.svg)](https://github.com/dcr-unibe-ch/presize)
 [![Actions
 Status](https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-release/badge.svg)](https://github.com/dcr-unibe-ch/presize/actions)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
@@ -29,7 +29,7 @@ install.packages("presize")
 You can install the development version of `presize` with:
 
 ``` r
-install.packages('presize', repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages('presize', repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Overview
@@ -37,7 +37,7 @@ install.packages('presize', repos = c('https://ctu-bern.r-universe.dev', 'https:
 `presize` provides functions for
 
 | Measure                    | Function         | Methods available                                                                                                        |
-| -------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+|----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------|
 | **Descriptive measures**   |                  |                                                                                                                          |
 | Mean                       | `prec_mean`      |                                                                                                                          |
 | Proportion                 | `prec_prop`      | Wilson, Agresti-Coull, exact, Wald (see Brown, Cai, and DasGupta 2001)                                                   |
@@ -141,7 +141,9 @@ prec_prop(p = 0.15, n = seq(600, 800, 50))
 
 An online interactive version of the package is available
 [here](https://shiny.ctu.unibe.ch/presize). The app can also be launched
-locally via `launch_presize_app()` in RStudio.
+locally via
+[`launch_presize_app()`](https://ctu-bern.github.io/presize/reference/launch_presize_app.md)
+in RStudio.
 
 ![](reference/figures/app.png)
 
@@ -170,10 +172,10 @@ guidelines](https://github.com/dcr-unibe-ch/presize/blob/master/CONTRIBUTING.md)
 
 ## Funding
 
-`presize` was largely developed at CTU Bern, with collaboration from CTU
+`presize` was largely developed at DCR, with collaboration from CTU
 Basel. Funding was provided by the Swiss Clinical Trial Organisation.
 
-![](reference/figures/SCTO_Platforms.png)
+![](reference/figures/Red%20(3D)_RGB@2x.png)
 
 ## Citation [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
 
@@ -209,11 +211,11 @@ i(8476): 307–10. <https://doi.org/10.1016/S0140-6736(86)90837-8>.
 Bonett, Douglas G., and Thomas A. Wright. 2015. “Cronbach’s Alpha
 Reliability: Interval Estimation, Hypothesis Testing, and Sample Size
 Planning.” *Journal of Organizational Behavior* 36 (1): 3–15.
-<https://doi.org/https://doi.org/10.1002/job.1960>.
+<https://doi.org/><https://doi.org/10.1002/job.1960>.
 
 Bonnett, D G. 2002. “Sample Size Requirements for Estimating Intraclass
 Correlations with Desired Precision.” *Statistics in Medicine* 21:
-1331–5. <https://doi.org/10.1002/sim.1108>.
+1331–35. <https://doi.org/10.1002/sim.1108>.
 
 Bonnett, D G, and T A Wright. 2000. “Sample Size Requirements for
 Estimating Pearson, Kendall and Spearman Correlations.” *Psychometrika*
@@ -226,8 +228,8 @@ Binomial Proportion.” *Statistical Science* 16 (2): 101–17.
 Emerging Risk Factors Collaboration, N Sarwar, P Gao, S R Seshasai, R
 Gobin, S Kaptoge, E Di Angelantonio, et al. 2010. “Diabetes Mellitus,
 Fasting Blood Glucose Concentration, and Risk of Vascular Disease: A
-Collaborative Meta-Analysis of 102 Prospective Studies.” *Lancet* 375
-(9733): 2215–22. <https://doi.org/10.1016/S0140-6736(10)60484-9>.
+Collaborative Meta-Analysis of 102 Prospective Studies.” *Lancet* 375:
+2215–22. <https://doi.org/10.1016/S0140-6736(10)60484-9>.
 
 Fagerland, M W, S Lydersen, and P Laake. 2015. “Recommended Confidence
 Intervals for Two Independent Binomial Proportions.” *Statistical
@@ -235,7 +237,7 @@ Methods in Medical Research* 24 (2): 224–54.
 <https://doi.org/10.1177/0962280211415469>.
 
 Hanley, J A, and B J McNeil. 1982. “The Meaning and Use of the Area
-Under a Receiver Operating Characteristic (Roc) Curve.” *Radiology* 148:
+Under a Receiver Operating Characteristic (ROC) Curve.” *Radiology* 148:
 29–36. <https://doi.org/10.1148/radiology.143.1.7063747>.
 
 Katz, D, J Baptista, S P Azen, and M C Pike. 1978. “Obtaining Confidence
@@ -253,7 +255,7 @@ Miettinen, O, and M Nurminen. 1985. “Comparative Analysis of Two Rates.”
 Newcombe, R G. 1998. “Interval Estimation for the Difference Between
 Independent Proportions: Comparison of Eleven Methods.” *Statistics in
 Medicine* 17: 873–90.
-[https://doi.org/10.1002/(sici)1097-0258(19980430)17:8\<873::aid-sim779\>3.0.co;2-i](https://doi.org/10.1002/\(sici\)1097-0258\(19980430\)17:8%3C873::aid-sim779%3E3.0.co;2-i).
+<https://doi.org/10.1002/(sici)1097-0258(19980430)17:8%3C873::aid-sim779%3E3.0.co;2-i>.
 
 Rothman, K J, and S Greenland. 2018. “Planning Study Size Based on
 Precision Rather Than Power.” *Epidemiology* 29: 599–603.
@@ -262,9 +264,9 @@ Precision Rather Than Power.” *Epidemiology* 29: 599–603.
 Rotondi, M A, and A Donner. 2012. “A Confidence Interval Approach to
 Sample Size Estimation for Interobserver Agreement Studies with Multiple
 Raters and Outcomes.” *Journal of Clinical Epidemiology* 65: 778–84.
-[https://doi.org/10.1016/j.jclinepi.2011.10.019](https://doi.org/10.1016/j.jclinepi.2011.10.019%20).
+<https://doi.org/10.1016/j.jclinepi.2011.10.019>.
 
 Simel, D L, G P Samsa, and D B Matchar. 1991. “Likelihood Ratios with
 Confidence: Sample Size Estimation for Diagnostic Test Studies.”
-*Journal of Clinical Epidemiology* 44 (8): 763–70.
+*Journal of Clinical Epidemiology* 44: 763–70.
 <https://doi.org/10.1016/0895-4356(91)90128-v>.

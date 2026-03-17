@@ -30,34 +30,34 @@ prec_spec(
 
 ## Arguments
 
-  - sens, spec:
-    
-    proportions.
+- sens, spec:
 
-  - n:
-    
-    number of observations.
+  proportions.
 
-  - ntot:
-    
-    total sample size.
+- n:
 
-  - prev:
-    
-    prevalence of cases/disease (i.e. proportion of `ntot` with the
-    disease).
+  number of observations.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- ntot:
 
-  - round:
-    
-    string, round calculated `n` up (`ceiling`) or down (`floor`).
+  total sample size.
 
-  - ...:
-    
-    options passed to prec\_prop (e.g. method, conf.width, conf.level).
+- prev:
+
+  prevalence of cases/disease (i.e. proportion of `ntot` with the
+  disease).
+
+- conf.width:
+
+  precision (the full width of the confidence interval).
+
+- round:
+
+  string, round calculated `n` up (`ceiling`) or down (`floor`).
+
+- ...:
+
+  options passed to prec_prop (e.g. method, conf.width, conf.level).
 
 ## Value
 

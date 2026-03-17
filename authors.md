@@ -2,20 +2,20 @@
 
 ## Authors
 
-  - **Armando Lenz**. Author.
+- **Armando Lenz**. Author.
 
-  - **Alan G. Haynes**. Maintainer, author.
+- **Alan G. Haynes**. Maintainer, author.
 
-  - **Andreas Limacher**. Author.
+- **Andreas Limacher**. Author.
 
-  - **Odile Stalder**. Contributor.
+- **Odile Stalder**. Contributor.
 
-  - **Marie Roumet**. Contributor.
+- **Marie Roumet**. Contributor.
 
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/CTU-Bern/presize/blob/master/inst/CITATION)
+[`inst/CITATION`](https://github.com/dcr-unibe-ch/presize/blob/master/inst/CITATION)
 
 Haynes et al., (2021). presize: An R-package for precision-based sample
 size calculation in clinical research. Journal of Open Source Software,

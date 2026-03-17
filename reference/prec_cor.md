@@ -18,30 +18,30 @@ prec_cor(
 
 ## Arguments
 
-  - r:
-    
-    desired correlation coefficient.
+- r:
 
-  - n:
-    
-    sample size.
+  desired correlation coefficient.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- n:
 
-  - conf.level:
-    
-    confidence level.
+  sample size.
 
-  - method:
-    
-    Exactly one of `pearson` (*default*), `kendall`, or `spearman`.
-    Methods can be abbreviated.
+- conf.width:
 
-  - ...:
-    
-    other options to uniroot (e.g. `tol`)
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- method:
+
+  Exactly one of `pearson` (*default*), `kendall`, or `spearman`.
+  Methods can be abbreviated.
+
+- ...:
+
+  other options to uniroot (e.g. `tol`)
 
 ## Value
 
@@ -54,14 +54,14 @@ Exactly one of the parameters `n` or `conf.width` must be passed as
 NULL, and that parameter is determined from the other.
 
 Sample size or precision is calculated according to formula 2 in Bonett
-and Wright (2000). The use of pearson is only recommended, if \\(n \\ge
-25\\). The pearson correlation coefficient assumes bivariate normality.
+and Wright (2000). The use of pearson is only recommended, if \\n \ge
+25\\. The pearson correlation coefficient assumes bivariate normality.
 If the assumption of bivariate normality cannot be met, spearman or
 kendall should be considered.
 
 n is rounded up to the next whole number using `ceiling`.
 
-`uniroot` is used to solve n.
+[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve n.
 
 ## References
 

@@ -18,37 +18,37 @@ prec_prop(
 
 ## Arguments
 
-  - p:
-    
-    proportion.
+- p:
 
-  - n:
-    
-    number of observations.
+  proportion.
 
-  - conf.width:
-    
-    precision (the full width of the confidence interval).
+- n:
 
-  - conf.level:
-    
-    confidence level.
+  number of observations.
 
-  - method:
-    
-    The method to use to calculate precision. Exactly one method may be
-    provided. Methods can be abbreviated.
+- conf.width:
 
-  - ...:
-    
-    other arguments to uniroot (e.g. `tol`).
+  precision (the full width of the confidence interval).
+
+- conf.level:
+
+  confidence level.
+
+- method:
+
+  The method to use to calculate precision. Exactly one method may be
+  provided. Methods can be abbreviated.
+
+- ...:
+
+  other arguments to uniroot (e.g. `tol`).
 
 ## Value
 
 Object of class "presize", a list of arguments (including the computed
 one) augmented with method and note elements. In the wilson and
 agresti-coull formula, the p from which the confidence interval is
-calculated is adjusted by a term (i.e. \\(p + term \\pm ci\\)). This
+calculated is adjusted by a term (i.e. \\p + term \pm ci\\). This
 adjusted p is returned in `padj`.
 
 ## Details
@@ -61,8 +61,9 @@ wilson method is suggested for small `n` (\< 40), and the agresti-coull
 method is suggested for larger `n` (see reference). The wald method is
 not suggested, but provided due to its widely distributed use.
 
-`uniroot` is used to solve `n` for the agresti-coull, wilson, and exact
-methods. Agresti-coull can be abbreviated by ac.
+[`uniroot`](https://rdrr.io/r/stats/uniroot.html) is used to solve `n`
+for the agresti-coull, wilson, and exact methods. Agresti-coull can be
+abbreviated by ac.
 
 ## References
 
@@ -72,8 +73,10 @@ Proportion*, Statistical Science, 16:2, 101-117,
 
 ## See also
 
-`binom.test`, `binom.confint` in package binom, and `binconf` in package
-Hmisc
+[`binom.test`](https://rdrr.io/r/stats/binom.test.html),
+[`binom.confint`](https://rdrr.io/pkg/binom/man/binom.confint.html) in
+package binom, and
+[`binconf`](https://rdrr.io/pkg/Hmisc/man/binconf.html) in package Hmisc
 
 ## Examples
 
