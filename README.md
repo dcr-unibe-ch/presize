@@ -147,7 +147,7 @@ An online interactive version of the package is available
 [here](https://shiny.ctu.unibe.ch/presize). The app can also be launched
 locally via `launch_presize_app()` in RStudio.
 
-<img src="man/figures/app.png" alt="" width="1303" />
+<img src="man/figures/app.png" alt="" width="1034" />
 
 ## Getting help
 
@@ -177,7 +177,7 @@ guidelines](https://github.com/dcr-unibe-ch/presize/blob/master/CONTRIBUTING.md)
 `presize` was largely developed at DCR, with collaboration from CTU
 Basel. Funding was provided by the Swiss Clinical Trial Organisation.
 
-<img src="man/figures/Red (3D)_RGB@2x.png" alt="" width="1481" />
+<img src="man/figures/newsctologo.png" alt="" width="1481" />
 
 <!-- ![](man/fig/scto_ctu_member_cmyk.jpg) -->
 
