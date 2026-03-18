@@ -175,7 +175,7 @@ guidelines](https://github.com/dcr-unibe-ch/presize/blob/master/CONTRIBUTING.md)
 `presize` was largely developed at DCR, with collaboration from CTU
 Basel. Funding was provided by the Swiss Clinical Trial Organisation.
 
-![](reference/figures/Red%20(3D)_RGB@2x.png)
+![](reference/figures/newsctologo.png)
 
 ## Citation [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
 
