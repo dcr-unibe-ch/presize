@@ -68,7 +68,7 @@ ui <- dashboardPage(skin = "red",
                  br(),
                  "presize was developed by members of the statistics and methodology platform of the Swiss Clinical Trial Organisation",
                  br(),
-                 img(src = "Red (3D)_RGB@2x.png", width = "95%", style="border: 2px solid #FFFFFF; background-color:white;"),
+                 img(src = "newsctologo.png", width = "95%", style="background-color:white;"),
                  width = 12
              )
          ),

@@ -146,7 +146,7 @@ If you want to contribute code, please feel free to fork the repository, make yo
 `presize` was largely developed at DCR, with collaboration from CTU Basel. Funding was provided by the Swiss Clinical Trial Organisation.
 
 ```{r, echo=FALSE}
-knitr::include_graphics("man/figures/Red (3D)_RGB@2x.png")
+knitr::include_graphics("man/figures/newsctologo.png")
 ```
 
 <!-- ![](man/fig/scto_ctu_member_cmyk.jpg) -->
