@@ -21,7 +21,8 @@ prec_mean(
 
 - mean:
 
-  mean.
+  hypothesized mean; not used in determining n or precision. Only needed
+  to display a hypothetical confidence interval.
 
 - sd:
 
@@ -86,4 +87,20 @@ prec_mean(mean = 5, sd = 2.5, conf.width = 2.34)  # approximately the inverse of
 #> 
 #>   mean  sd        n conf.width conf.level  lwr  upr
 #> 1    5 2.5 20.00108       2.34       0.95 3.83 6.17
+
+# The mean argument is hypothetical and only used to calculate lower and upper
+# limits of a hypothesized CI. The estimated n or conf.width only depends on
+# the standard deviation.
+
+# same conf.width regardless of mean
+prec_mean(mean = 25, sd = 2.5, n = 20)$conf.width
+#> [1] 2.340072
+prec_mean(mean = 250, sd = 2.5, n = 20)$conf.width
+#> [1] 2.340072
+
+# same n regardless of mean
+prec_mean(mean = 25, sd = 2.5, conf.width = 2.34)$n
+#> [1] 20.00108
+prec_mean(mean = 250, sd = 2.5, conf.width = 2.34)$n
+#> [1] 20.00108
 ```

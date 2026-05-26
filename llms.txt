@@ -1,7 +1,7 @@
 # presize
 
 [![](https://www.r-pkg.org/badges/version/presize?color=green)](https://cran.r-project.org/package=presize)
-[![](https://img.shields.io/badge/dev%20version-0.3.12-blue.svg)](https://github.com/dcr-unibe-ch/presize)
+[![](https://img.shields.io/badge/dev%20version-0.3.13-blue.svg)](https://github.com/dcr-unibe-ch/presize)
 [![Actions
 Status](https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-release/badge.svg)](https://github.com/dcr-unibe-ch/presize/actions)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.03118/status.svg)](https://doi.org/10.21105/joss.03118)
@@ -23,12 +23,14 @@ confidence interval), and vice versa.
 `presize` can be installed from CRAN in the usual manner:
 
 ``` r
+
 install.packages("presize")
 ```
 
 You can install the development version of `presize` with:
 
 ``` r
+
 install.packages('presize', repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
@@ -36,32 +38,32 @@ install.packages('presize', repos = c('https://dcr-unibe-ch.r-universe.dev', 'ht
 
 `presize` provides functions for
 
-| Measure                    | Function         | Methods available                                                                                                        |
-|----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------|
-| **Descriptive measures**   |                  |                                                                                                                          |
-| Mean                       | `prec_mean`      |                                                                                                                          |
-| Proportion                 | `prec_prop`      | Wilson, Agresti-Coull, exact, Wald (see Brown, Cai, and DasGupta 2001)                                                   |
-| Rate                       | `prec_rate`      | Score, variance stabilizing, exact, Wald (see Barker 2002)                                                               |
-| **Absolute differences**   |                  |                                                                                                                          |
-| Mean difference            | `prec_meandiff`  |                                                                                                                          |
-| Risk difference            | `prec_riskdiff`  | Newcombe (Newcombe 1998), Miettinen-Nurminen (Miettinen and Nurminen 1985), Agresti-Caffo (Agresti and Caffo 2000), Wald |
-| **Relative differences**   |                  |                                                                                                                          |
-| Odds ratio                 | `prec_or`        | Gart, Wolff, independence smoothed logit (see Fagerland, Lydersen, and Laake 2015)                                       |
-| Risk ratio                 | `prec_riskratio` | Koopman (Koopman 1984), Katz (Katz et al. 1978)                                                                          |
-| Rate ratio                 | `prec_rateratio` | Rothman (Rothman and Greenland 2018)                                                                                     |
-| **Correlation measures**   |                  |                                                                                                                          |
-| Correlation coefficient    | `prec_cor`       | Pearson, Kendall, Spearman (see Bonnett and Wright 2000)                                                                 |
-| Intraclass correlation     | `prec_icc`       | Bonnett (2002)                                                                                                           |
-| Limit of agreement         | `prec_lim_agree` | Bland and Altman (1986)                                                                                                  |
-| Cohen’s kappa              | `prec_kappa`     | Rotondi and Donner (2012)                                                                                                |
-| Cronbach’s alpha           | `prec_cronb`     | Bonett and Wright (2015)                                                                                                 |
-| **Diagnostic measures**    |                  |                                                                                                                          |
-| Sensitivity¹               | `prec_sens`      | As per `prec_prop`                                                                                                       |
-| Specificity¹               | `prec_spec`      | As per `prec_prop`                                                                                                       |
-| Area under the curve       | `prec_auc`       | Hanley and McNeil (1982)                                                                                                 |
-| Negative likelihood ratio² | `prec_neg_lr`    | Simel, Samsa, and Matchar (1991)                                                                                         |
-| Positive likelihood ratio² | `prec_pos_lr`    | Simel, Samsa, and Matchar (1991)                                                                                         |
-| Generic likelihood ratio   | `prec_lr`        | Simel, Samsa, and Matchar (1991)                                                                                         |
+| Measure | Function | Methods available |
+|----|----|----|
+| **Descriptive measures** |  |  |
+| Mean | `prec_mean` |  |
+| Proportion | `prec_prop` | Wilson, Agresti-Coull, exact, Wald (see Brown et al. 2001) |
+| Rate | `prec_rate` | Score, variance stabilizing, exact, Wald (see Barker 2002) |
+| **Absolute differences** |  |  |
+| Mean difference | `prec_meandiff` |  |
+| Risk difference | `prec_riskdiff` | Newcombe (Newcombe 1998), Miettinen-Nurminen (Miettinen and Nurminen 1985), Agresti-Caffo (Agresti and Caffo 2000), Wald |
+| **Relative differences** |  |  |
+| Odds ratio | `prec_or` | Gart, Wolff, independence smoothed logit (see Fagerland et al. 2015) |
+| Risk ratio | `prec_riskratio` | Koopman (Koopman 1984), Katz (Katz et al. 1978) |
+| Rate ratio | `prec_rateratio` | Rothman (Rothman and Greenland 2018) |
+| **Correlation measures** |  |  |
+| Correlation coefficient | `prec_cor` | Pearson, Kendall, Spearman (see Bonnett and Wright 2000) |
+| Intraclass correlation | `prec_icc` | Bonnett (2002) |
+| Limit of agreement | `prec_lim_agree` | Bland and Altman (1986) |
+| Cohen’s kappa | `prec_kappa` | Rotondi and Donner (2012) |
+| Cronbach’s alpha | `prec_cronb` | Bonett and Wright (2015) |
+| **Diagnostic measures** |  |  |
+| Sensitivity¹ | `prec_sens` | As per `prec_prop` |
+| Specificity¹ | `prec_spec` | As per `prec_prop` |
+| Area under the curve | `prec_auc` | Hanley and McNeil (1982) |
+| Negative likelihood ratio² | `prec_neg_lr` | Simel et al. (1991) |
+| Positive likelihood ratio² | `prec_pos_lr` | Simel et al. (1991) |
+| Generic likelihood ratio | `prec_lr` | Simel et al. (1991) |
 
 ¹ Simple wrappers for `prec_prop`.
 
@@ -79,6 +81,7 @@ within 5% (plus/minus 2.5%). With `presize`, this is simple. We use the
 as arguments `p` and `conf.width`:
 
 ``` r
+
 library(presize) # load the package
 prec_prop(p = 0.15, conf.width = 0.05)
 #> Warning in prec_prop(p = 0.15, conf.width = 0.05): more than one method was
@@ -100,6 +103,7 @@ accept a CI width of 6% (plus/minus 3%). In such a case, we can pass the
 arguments `p` and `n`.
 
 ``` r
+
 prec_prop(p = 0.15, n = 600)
 #> Warning in prec_prop(p = 0.15, n = 600): more than one method was chosen,
 #> 'wilson' will be used
@@ -121,6 +125,7 @@ vector to one of the arguments, which could be used to create something
 analogous to a power curve:
 
 ``` r
+
 prec_prop(p = 0.15, n = seq(600, 800, 50))
 #> Warning in prec_prop(p = 0.15, n = seq(600, 800, 50)): more than one method was
 #> chosen, 'wilson' will be used
@@ -225,11 +230,11 @@ Brown, L D, T T Cai, and A DasGupta. 2001. “Interval Estimation for a
 Binomial Proportion.” *Statistical Science* 16 (2): 101–17.
 <https://doi.org/10.1214/ss/1009213286>.
 
-Emerging Risk Factors Collaboration, N Sarwar, P Gao, S R Seshasai, R
-Gobin, S Kaptoge, E Di Angelantonio, et al. 2010. “Diabetes Mellitus,
-Fasting Blood Glucose Concentration, and Risk of Vascular Disease: A
-Collaborative Meta-Analysis of 102 Prospective Studies.” *Lancet* 375:
-2215–22. <https://doi.org/10.1016/S0140-6736(10)60484-9>.
+Emerging Risk Factors Collaboration, N Sarwar, P Gao, et al. 2010.
+“Diabetes Mellitus, Fasting Blood Glucose Concentration, and Risk of
+Vascular Disease: A Collaborative Meta-Analysis of 102 Prospective
+Studies.” *Lancet* 375: 2215–22.
+<https://doi.org/10.1016/S0140-6736(10)60484-9>.
 
 Fagerland, M W, S Lydersen, and P Laake. 2015. “Recommended Confidence
 Intervals for Two Independent Binomial Proportions.” *Statistical

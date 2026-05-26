@@ -10,6 +10,7 @@ confidence interval), and vice versa.
 `presize` is loaded like any other R Package:
 
 ``` r
+
 library(presize)
 ```
 
@@ -32,6 +33,7 @@ We plug the values into the `prec_sens` (precision of sensitivity)
 function as follows
 
 ``` r
+
 (ss <- prec_sens(sens   = .75,  # sensitivity 
                  prev   = .15,  # prevalence
                  ntot   = 250,  # sample size
@@ -62,6 +64,7 @@ demonstration purposes, we can also change the method used to calculate
 the CI.
 
 ``` r
+
 prec_spec(spec   = .75,  # specificity 
           prev   = .15,  # prevalence
           ntot   = 250,  # sample size
@@ -82,6 +85,7 @@ precision of a mean of 60 with an SD of 10 and 40 observations is
 calculated as follows.
 
 ``` r
+
 prec_mean(60, sd = 10, n = 40)
 #> 
 #>      precision for mean 
@@ -99,6 +103,7 @@ also possible with `presize`. Using the same code as above, we replace
 the `ntot` argument with the `conf.width` argument.
 
 ``` r
+
 (ss <- prec_sens(sens       = .75,   # sensitivity 
                  prev       = .15,   # prevalence
                  conf.width = .1,    # CI width
@@ -130,6 +135,7 @@ with the condition and we expect a sensitivity of 60%, we can put those
 values in instead.
 
 ``` r
+
 prec_sens(.6, n = 50, method = "wilson")
 #> 
 #>      precision for a sensitivity with Wilson confidence interval. 
@@ -145,6 +151,7 @@ Sensitivities and specificities are just proportions so `prec_prop` can
 also be used for this latter example.
 
 ``` r
+
 prec_prop(.6, n = 50, method = "wilson")
 #> 
 #>      precision for a proportion with Wilson confidence interval. 
@@ -160,6 +167,7 @@ sample size to obtain a CI width of 5 units with a mean of 60 with an SD
 of 10 is calculated as follows.
 
 ``` r
+
 prec_mean(60, sd = 10, conf.width = 5)
 #> 
 #>      sample size for mean 
@@ -183,6 +191,7 @@ length!). For varying a single parameter, scenarios can be created with
 Here we vary sensitivity between 50% and 95% in steps of 5%.
 
 ``` r
+
 (scenario_data <- prec_sens(sens = seq(.5, .95, .05), 
                             prev = .15, 
                             ntot = 250, 
@@ -212,6 +221,7 @@ parameters simultaneously. Below we vary sensitivity, prevalence and
 sample size.
 
 ``` r
+
 scenarios <- expand.grid(sens = seq(.5, .95, .1),
                          prev = seq(.1, .2, .04),
                          ntot = c(250, 350))
@@ -256,6 +266,7 @@ for this. Below we show CI width as a function of sensitivity, but the
 other parameters could be chosen instead.
 
 ``` r
+
 scenario_df <- as.data.frame(scenario_data)
 
 library(ggplot2)
@@ -279,6 +290,7 @@ and format the table and use the `gt` package to print a nice table in
 HTML.
 
 ``` r
+
 library(dplyr)
 #> 
 #> Attaching package: 'dplyr'

@@ -23,6 +23,8 @@ Useful links:
 
 Authors:
 
+- Alan G. Haynes <alan.haynes@unibe.ch>
+
 - Armando Lenz
 
 - Andreas Limacher <andreas.limacher@paraplegie.ch>

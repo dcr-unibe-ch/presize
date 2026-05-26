@@ -12,8 +12,8 @@
 <link rel="icon" sizes="any" href="favicon.ico">
 <link rel="manifest" href="site.webmanifest">
 <script src="lightswitch.js"></script><script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Precision Based Sample Size Calculation">
 <meta name="description" content="Bland (2009) &lt;doi:10.1136/bmj.b3985&gt; recommended to base study sizes on the width of the confidence interval rather the power of a statistical test. The goal of presize is to provide functions for such precision based sample size calculations. For a given sample size, the functions will return the precision (width of the confidence interval), and vice versa.">
@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">presize</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.12</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.13</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
 <img src="logo.png" class="logo" alt=""><h1 id="presize-">presize <a class="anchor" aria-label="anchor" href="#presize-"></a>
 </h1>
 </div>
-<p><a href="https://cran.r-project.org/package=presize" class="external-link"><img src="https://www.r-pkg.org/badges/version/presize?color=green"></a> <a href="https://github.com/dcr-unibe-ch/presize" class="external-link"><img src="https://img.shields.io/badge/dev%20version-0.3.12-blue.svg"></a> <a href="https://github.com/dcr-unibe-ch/presize/actions" class="external-link"><img src="https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-release/badge.svg" alt="Actions Status"></a> <a href="https://doi.org/10.21105/joss.03118" class="external-link"><img src="https://joss.theoj.org/papers/10.21105/joss.03118/status.svg" alt="DOI"></a> <a href="https://cran.r-project.org/package=presize" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/presize" alt="metacran downloads"></a> &lt;– <a href="https://codecov.io/gh/CTU-Bern/presize?branch=master" class="external-link"><img src="https://codecov.io/gh/CTU-Bern/presize/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> –&gt;</p>
+<p><a href="https://cran.r-project.org/package=presize" class="external-link"><img src="https://www.r-pkg.org/badges/version/presize?color=green"></a> <a href="https://github.com/dcr-unibe-ch/presize" class="external-link"><img src="https://img.shields.io/badge/dev%20version-0.3.13-blue.svg"></a> <a href="https://github.com/dcr-unibe-ch/presize/actions" class="external-link"><img src="https://github.com/dcr-unibe-ch/presize/workflows/R-CMD-release/badge.svg" alt="Actions Status"></a> <a href="https://doi.org/10.21105/joss.03118" class="external-link"><img src="https://joss.theoj.org/papers/10.21105/joss.03118/status.svg" alt="DOI"></a> <a href="https://cran.r-project.org/package=presize" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/presize" alt="metacran downloads"></a> &lt;– <a href="https://codecov.io/gh/CTU-Bern/presize?branch=master" class="external-link"><img src="https://codecov.io/gh/CTU-Bern/presize/branch/master/graph/badge.svg" alt="Codecov test coverage"></a> –&gt;</p>
 <p><a href="https://www.bmj.com/content/339/bmj.b3985" class="external-link">Bland (2009)</a> recommended to base study sizes on the width of the confidence interval rather the power of a statistical test. The goal of <code>presize</code> is to provide functions for such precision based sample size calculations. For a given sample size, the functions will return the precision (width of the confidence interval), and vice versa.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -76,141 +76,141 @@
 <p><code>presize</code> provides functions for</p>
 <table class="table">
 <colgroup>
-<col width="21%">
-<col width="10%">
-<col width="68%">
+<col width="33%">
+<col width="33%">
+<col width="33%">
 </colgroup>
-<thead><tr class="header">
+<thead><tr>
 <th>Measure</th>
 <th>Function</th>
 <th>Methods available</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Descriptive measures</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mean</td>
 <td><code>prec_mean</code></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Proportion</td>
 <td><code>prec_prop</code></td>
-<td>Wilson, Agresti-Coull, exact, Wald (see Brown, Cai, and DasGupta 2001)</td>
+<td>Wilson, Agresti-Coull, exact, Wald (see Brown et al. 2001)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Rate</td>
 <td><code>prec_rate</code></td>
 <td>Score, variance stabilizing, exact, Wald (see Barker 2002)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Absolute differences</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mean difference</td>
 <td><code>prec_meandiff</code></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Risk difference</td>
 <td><code>prec_riskdiff</code></td>
 <td>Newcombe (Newcombe 1998), Miettinen-Nurminen (Miettinen and Nurminen 1985), Agresti-Caffo (Agresti and Caffo 2000), Wald</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Relative differences</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Odds ratio</td>
 <td><code>prec_or</code></td>
-<td>Gart, Wolff, independence smoothed logit (see Fagerland, Lydersen, and Laake 2015)</td>
+<td>Gart, Wolff, independence smoothed logit (see Fagerland et al. 2015)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Risk ratio</td>
 <td><code>prec_riskratio</code></td>
 <td>Koopman (Koopman 1984), Katz (Katz et al. 1978)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Rate ratio</td>
 <td><code>prec_rateratio</code></td>
 <td>Rothman (Rothman and Greenland 2018)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Correlation measures</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Correlation coefficient</td>
 <td><code>prec_cor</code></td>
 <td>Pearson, Kendall, Spearman (see Bonnett and Wright 2000)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Intraclass correlation</td>
 <td><code>prec_icc</code></td>
 <td>Bonnett (2002)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Limit of agreement</td>
 <td><code>prec_lim_agree</code></td>
 <td>Bland and Altman (1986)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cohen’s kappa</td>
 <td><code>prec_kappa</code></td>
 <td>Rotondi and Donner (2012)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Cronbach’s alpha</td>
 <td><code>prec_cronb</code></td>
 <td>Bonett and Wright (2015)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Diagnostic measures</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Sensitivity<sup>1</sup>
 </td>
 <td><code>prec_sens</code></td>
 <td>As per <code>prec_prop</code>
 </td>
 </tr>
-<tr class="even">
+<tr>
 <td>Specificity<sup>1</sup>
 </td>
 <td><code>prec_spec</code></td>
 <td>As per <code>prec_prop</code>
 </td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Area under the curve</td>
 <td><code>prec_auc</code></td>
 <td>Hanley and McNeil (1982)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Negative likelihood ratio<sup>2</sup>
 </td>
 <td><code>prec_neg_lr</code></td>
-<td>Simel, Samsa, and Matchar (1991)</td>
+<td>Simel et al. (1991)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Positive likelihood ratio<sup>2</sup>
 </td>
 <td><code>prec_pos_lr</code></td>
-<td>Simel, Samsa, and Matchar (1991)</td>
+<td>Simel et al. (1991)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Generic likelihood ratio</td>
 <td><code>prec_lr</code></td>
-<td>Simel, Samsa, and Matchar (1991)</td>
+<td>Simel et al. (1991)</td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +304,7 @@ Haynes et al., (2021). presize: An R-package for precision-based sample size cal
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-ac2000" class="csl-entry">
 Agresti, A, and B Caffo. 2000. “Simple and Effective Confidence Intervals for Proportions and Differences of Proportions Result from Adding Two Successes and Two Failures.” <em>The Americal Statistician</em> 54 (4): 280–88. <a href="https://doi.org/10.2307/2685779" class="external-link uri">https://doi.org/10.2307/2685779</a>.
 </div>
@@ -327,7 +327,7 @@ Bonnett, D G, and T A Wright. 2000. “Sample Size Requirements for Estimating P
 Brown, L D, T T Cai, and A DasGupta. 2001. “Interval Estimation for a Binomial Proportion.” <em>Statistical Science</em> 16 (2): 101–17. <a href="https://doi.org/10.1214/ss/1009213286" class="external-link uri">https://doi.org/10.1214/ss/1009213286</a>.
 </div>
 <div id="ref-diab" class="csl-entry">
-Emerging Risk Factors Collaboration, N Sarwar, P Gao, S R Seshasai, R Gobin, S Kaptoge, E Di Angelantonio, et al. 2010. “Diabetes Mellitus, Fasting Blood Glucose Concentration, and Risk of Vascular Disease: A Collaborative Meta-Analysis of 102 Prospective Studies.” <em>Lancet</em> 375: 2215–22. <a href="https://doi.org/10.1016/S0140-6736(10)60484-9" class="external-link uri">https://doi.org/10.1016/S0140-6736(10)60484-9</a>.
+Emerging Risk Factors Collaboration, N Sarwar, P Gao, et al. 2010. “Diabetes Mellitus, Fasting Blood Glucose Concentration, and Risk of Vascular Disease: A Collaborative Meta-Analysis of 102 Prospective Studies.” <em>Lancet</em> 375: 2215–22. <a href="https://doi.org/10.1016/S0140-6736(10)60484-9" class="external-link uri">https://doi.org/10.1016/S0140-6736(10)60484-9</a>.
 </div>
 <div id="ref-fll2015" class="csl-entry">
 Fagerland, M W, S Lydersen, and P Laake. 2015. “Recommended Confidence Intervals for Two Independent Binomial Proportions.” <em>Statistical Methods in Medical Research</em> 24 (2): 224–54. <a href="https://doi.org/10.1177/0962280211415469" class="external-link uri">https://doi.org/10.1177/0962280211415469</a>.

@@ -1,5 +1,10 @@
 # Changelog
 
+## presize 0.3.13
+
+- Clarification of the `mean` argument in `prec_mean` (see
+  [\#113](https://github.com/dcr-unibe-ch/presize/issues/113))
+
 ## presize 0.3.12
 
 - Update SCTO logo
