@@ -25,7 +25,7 @@
 #'
 #' \code{\link[stats]{uniroot}} is used to solve \code{n}.
 #'
-#' @param mean mean.
+#' @param mean hypothesized mean; not used in determining n or precision. Only needed to display a hypothetical confidence interval.
 #' @param sd standard deviation.
 #' @param n number of observations.
 #' @param conf.width precision (the full width of the confidence interval).
@@ -41,6 +41,18 @@
 #' prec_mean(mean = 5, sd = 2.5, n = 20)
 #' # mean of 5, SD of 2.5, how many participants for CI width of 2.34?
 #' prec_mean(mean = 5, sd = 2.5, conf.width = 2.34)  # approximately the inverse of above
+#'
+#' # The mean argument is hypothetical and only used to calculate lower and upper
+#' # limits of a hypothesized CI. The estimated n or conf.width only depends on
+#' # the standard deviation.
+#'
+#' # same conf.width regardless of mean
+#' prec_mean(mean = 25, sd = 2.5, n = 20)$conf.width
+#' prec_mean(mean = 250, sd = 2.5, n = 20)$conf.width
+#'
+#' # same n regardless of mean
+#' prec_mean(mean = 25, sd = 2.5, conf.width = 2.34)$n
+#' prec_mean(mean = 250, sd = 2.5, conf.width = 2.34)$n
 #' @importFrom stats qt
 #' @importFrom stats qnorm
 #' @importFrom stats uniroot

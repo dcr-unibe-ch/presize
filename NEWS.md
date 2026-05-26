@@ -1,3 +1,7 @@
+## presize 0.3.13
+
+-   Clarification of the `mean` argument in `prec_mean` (see #113)
+
 ## presize 0.3.12
 
 -   Update SCTO logo
