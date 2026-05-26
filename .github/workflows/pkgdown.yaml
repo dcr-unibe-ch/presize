@@ -1,5 +1,9 @@
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '**/README.Rmd'
+      - '**/DESCRIPTION'
 
 name: pkgdown
 

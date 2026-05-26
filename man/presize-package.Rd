@@ -24,6 +24,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Alan G. Haynes \email{alan.haynes@unibe.ch}
   \item Armando Lenz
   \item Andreas Limacher \email{andreas.limacher@paraplegie.ch}
 }
